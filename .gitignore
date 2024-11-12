@@ -1,0 +1,27 @@
+node_modules/
+
+# Dependency directories for each project (client/server)
+client/node_modules/
+server/node_modules/
+
+
+# Build Output for each project
+client/dist/
+server/dist/
+client/build/
+server/build/
+
+# Environment files
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS files
+.DS_Store
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.sublime-workspace

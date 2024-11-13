@@ -1,7 +1,7 @@
 import express, { NextFunction, RequestHandler, Response } from "express";
-import { getCurrentTime } from "../services/timeService";
-import { authMiddleware } from "../middlewares/authMiddleware";
-import { schemaMiddleware } from "../middlewares/validateSchema";
+import { getCurrentTime } from "../services/timeService.ts";
+import { authMiddleware } from "../middlewares/authMiddleware.ts";
+import { schemaMiddleware } from "../middlewares/validateSchema.ts";
 
 const router = express.Router();
 

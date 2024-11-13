@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
-import { metricsMiddleware } from "./services/metricsService";
-import timeRoutes from "./routes/timeRoutes";
+import { metricsMiddleware } from "./services/metricsService.ts";
+import timeRoutes from "./routes/timeRoutes.ts";
 
 const app = express();
 

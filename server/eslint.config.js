@@ -1,19 +1,27 @@
-import { ESLint } from "eslint";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import prettierPlugin from "eslint-plugin-prettier";
+import typescriptParser from "@typescript-eslint/parser";
 
 export default [
   {
     files: ["**/*.ts"],
     ignores: ["node_modules", "dist"],
     languageOptions: {
-      parser: "@typescript-eslint/parser",
+      parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 2021,
         sourceType: "module",
       },
+      globals: {
+        process: "readonly",
+        __dirname: "readonly",
+        module: "readonly",
+        require: "readonly",
+      },
     },
     plugins: {
-      "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
-      prettier: require("eslint-plugin-prettier"),
+      "@typescript-eslint": typescriptPlugin,
+      prettier: prettierPlugin,
     },
     rules: {
       "prettier/prettier": "warn",
@@ -23,15 +31,6 @@ export default [
       ],
       "no-console": "off",
       "no-process-exit": "warn",
-    },
-    extends: [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-    ],
-    env: {
-      node: true,
-      es2021: true,
     },
   },
 ];

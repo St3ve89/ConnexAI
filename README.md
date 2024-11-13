@@ -2,13 +2,6 @@
 
 A full-stack application with a backend API using Express and Prometheus, and a frontend client built with React and TypeScript.
 
-## Project Structure
-
-connexai/
-├── client/ # React frontend
-├── server/ # Express backend
-└── README.md # Documentation
-
 ## Requirements
 
 - Node.js (>= 14)

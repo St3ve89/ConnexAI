@@ -42,8 +42,6 @@ REACT_APP_SERVER_URL=http://localhost:3001
 REACT_APP_AUTH_TOKEN=mysecrettoken
 ```
 
-Note: No server `.env` is needed; refer to the chat for details.
-
 ## API Endpoints
 
 - GET /time: Returns server time (requires Authorization: Bearer mysecrettoken).
